@@ -1,0 +1,9 @@
+
+server:
+  port: 8085
+
+hero:
+  name: yasuo
+  skin: sourceProject:wind
+  age : 33
+  content: "hero: ${name}, skin: ${skin}"

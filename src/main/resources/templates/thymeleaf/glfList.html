@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    Thymeleaf模板引擎02
+    <h1>工料废信息</h1>
+    <table>
+        <tr>
+            <td>报废号</td>
+            <td>报废行号</td>
+            <td>零件号</td>
+            <td>项目号</td>
+            <td>录入人工号</td>
+            <td>仓库编码</td>
+            <td>工厂编号</td>
+            <td>供应商编码</td>
+            <td>报废时间</td>
+        </tr>
+        <tr th:each="glf:${glfList}">
+            <td th:text="${glf.bfh}"></td>
+            <td th:text="${glf.bfhh}"></td>
+            <td th:text="${glf.ljh}"></td>
+            <td th:text="${glf.xmh}"></td>
+            <td th:text="${glf.lrrgh}"></td>
+            <td th:text="${glf.ckbm}"></td>
+            <td th:text="${glf.gcbh}"></td>
+            <td th:text="${glf.gysbm}"></td>
+            <td th:text="${#dates.format(glf.bfsj,'yyyy-MM-dd')}"></td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@10.5.43.39:1521:orcl
+    username: pts_t
+    password: pts
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML5
+    encoding: UTF-8
+    cache: false
+  #设置静态文件路径，js,css等
+  mvc:
+    static-path-pattern: /static/**
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java
+server:
+  port: 8080
+hero:
+  name: riven
+  skin: 刺客信条
+  age : 23
+  content: "hero: ${name}, skin: ${skin}"
+
+
